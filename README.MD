@@ -48,10 +48,15 @@ $ docker logs <name> /* 이전의 로그를 볼 수 있음(변경 아님) */
 $ docker logs -f <name> /* Atteched 모드로 변경 */
 ```
 
-### Docker 컨테이너 중지
+### Docker 실행 중인 컨테이너
 
 ```
 $ docker ps
+```
+
+### Docker 컨테이너 중지
+
+```
 $ docker stop <name>
 ```
 
@@ -59,6 +64,30 @@ $ docker stop <name>
 
 ```
 $ docker ps -a
+```
+
+### Docker 모든 이미지 불러오기
+
+```
+$ docker images
+```
+
+### Docker 중지 된 컨테이너 삭제
+
+```
+$ docker rm <name> <name> ...
+```
+
+### Docker 이미지 삭제
+
+```
+$ docker rmi <ID> <ID> ...
+```
+
+### Docker 사용 안하는 이미지 모두 삭제
+
+```
+$ docker image prume
 ```
 
 ### Docker 컨테이너에서 Node.js 실행
@@ -73,6 +102,19 @@ $ docker run node
 $ docker run -it node
 ```
 
+### Docker 이미지 검사
+
+```
+$ docker image inspect <ID>
+```
+
+### Docker 컨테이너에서 컨테이너로 복붙
+
+```
+$ docker cp <폴더명>/<범위> <name>:/<복사할 폴더명>
+$ docker cp <name>:/<복사한 폴더명> <폴더명>
+```
+
 ### Docker --help 기능
 
 | 내용        | 설명                                       | 플래그 |
@@ -81,3 +123,4 @@ $ docker run -it node
 | Detached    | 터미널이 잠기지 않고 터미널과 분리 된다.   | -d     |
 | Interactive | 인터렉티브 모드(컨테이너에 값을 입력 가능) | -i     |
 | TTY(의사)   | 터미널을 생성                              | -t     |
+| Remove      | 컨테이너가 종료될 때 자동으로 제거         | --rm   |
