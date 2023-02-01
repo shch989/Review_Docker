@@ -115,6 +115,13 @@ $ docker cp <폴더명>/<범위> <name>:/<복사할 폴더명>
 $ docker cp <name>:/<복사한 폴더명> <폴더명>
 ```
 
+### Docker 컨테이너와 이미지에 이름 & 태그 지정
+
+```
+$ docker build -t <REPOSITORY>:<TAG> .
+$ docker run -p <실행포트:내부포트> <name> <REPOSITORY>:<TAG>
+```
+
 ### Docker --help 기능
 
 | 내용        | 설명                                       | 플래그 |
@@ -124,3 +131,4 @@ $ docker cp <name>:/<복사한 폴더명> <폴더명>
 | Interactive | 인터렉티브 모드(컨테이너에 값을 입력 가능) | -i     |
 | TTY(의사)   | 터미널을 생성                              | -t     |
 | Remove      | 컨테이너가 종료될 때 자동으로 제거         | --rm   |
+| Name        | 컨테이너의 이름 지정                       | --name |
