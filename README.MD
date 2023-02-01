@@ -20,7 +20,7 @@ $ docker build .
 ### Docker 컨테이너 시작
 
 ```
-$ docker run -p <PORT:PORT> <id>
+$ docker run -p <실행포트:현재포트> <id>
 ```
 
 ### Docker 컨테이너 중지
@@ -28,12 +28,6 @@ $ docker run -p <PORT:PORT> <id>
 ```
 $ docker ps
 $ docker stop <name>
-```
-
-### Docker 컨테이너 시작
-
-```
-$ docker run -p <PORT:PORT> <id>
 ```
 
 ### Docker 모든 컨테이너 불러오기
