@@ -132,3 +132,18 @@ $ docker run -p <실행포트:내부포트> <name> <REPOSITORY>:<TAG>
 | TTY(의사)   | 터미널을 생성                              | -t     |
 | Remove      | 컨테이너가 종료될 때 자동으로 제거         | --rm   |
 | Name        | 컨테이너의 이름 지정                       | --name |
+
+### Docker Hub에 push하기
+
+```
+$ docker login /* Docker Hub 로그인 */
+$ docker tag <goals>:<TAG> <DockerHub_Username>/<Repository>
+$ docker push <DockerHub_Username>/<Repository>
+$ docker logout /* Docker Hub 로그아웃 */
+```
+
+### Docker Hub에 pull하기
+
+```
+$ docker pull <DockerHub_Username>/<Repository>
+```
