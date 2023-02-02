@@ -1,4 +1,4 @@
-## Docker 기초
+## Docker 이미지 & 컨테이너: 코어 빌딩 블록
 
 ### Dockerfile 작성
 
@@ -147,3 +147,5 @@ $ docker logout /* Docker Hub 로그아웃 */
 ```
 $ docker pull <DockerHub_Username>/<Repository>
 ```
+
+## Docker 데이터 관리 및 볼륨으로 작업하기
