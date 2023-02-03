@@ -137,6 +137,7 @@ $ docker run -p <실행포트:내부포트> <name> <REPOSITORY>:<TAG>
 | Name        | 컨테이너의 이름 지정                       | --name <지정이름>          |
 | Volume      | 컨테이너를 삭제해도 보존될 데이터 지정     | --v <지정이름>:/<보존파일> |
 | Env         | 환경변수 .env 선언                         | -e <변수>=<값>             |
+| Network     | 컨테이너 간의 연결 할 네트워크 설정        | -network <네트워크이름>    |
 
 ### Docker Hub에 push하기
 
@@ -165,4 +166,23 @@ $ docker volume prune
 ```
 $ docker volume rm <v-name>
 $ docker volume prune
+```
+
+### Docker 호스트 통신을 위한 수정사항
+
+```
+$ mongodb://host.docker.internal:27017/
+```
+
+### Docker 컨테이너 간의 네트워크 생성
+
+```
+$ docker network create <네트워크이름> 
+```
+
+### Docker 네트워크가 있는 컨터이너 생성
+
+```
+$ docker run --network <네트워크이름> <데이터베이스>
+$ docker run --network <네트워크이름> -p <실행포트:내부포트> <name>
 ```
